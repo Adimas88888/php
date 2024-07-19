@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "964126c6-751a-4b19-925d-f8b239a3f220",
+		"name": "Debt Credit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30041811",
+		"_collection_link": "https://cloudy-space-262761.postman.co/workspace/Angplop~b927ad30-d3d8-4502-b8b1-22395c0dd0ce/collection/30041803-964126c6-751a-4b19-925d-f8b239a3f220?action=share&source=collection_link&creator=30041811"
+	},
+	"item": [
+		{
+			"name": "listing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "{{dev_url}}/api/debt-credit"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "2023-04-08",
+							"type": "text"
+						},
+						{
+							"key": "is_due_date",
+							"value": "0",
+							"description": "boolean",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "client",
+							"value": "Ricky",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "aaaaaaa",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "debt",
+							"description": "debt / credit ",
+							"type": "text"
+						},
+						{
+							"key": "descTrx",
+							"value": "descTrx",
+							"type": "text"
+						},
+						{
+							"key": "typeTrx",
+							"value": "increase_debt",
+							"description": "pay_debt / increase_debt",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "191203",
+							"type": "text"
+						},
+						{
+							"key": "is_trx_budget_plan",
+							"value": "1",
+							"description": "boolean (0/1)",
+							"type": "text"
+						},
+						{
+							"key": "budget_plan_id",
+							"value": "30",
+							"description": "ID budget plan yang akan dibuat transaksinya. (opsional)\nJika is_trx_budget_plan = 1, maka kolom ini menjadi required",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{dev_url}}/api/debt-credit"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "is_due_date",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "2025-09-09",
+							"type": "text"
+						},
+						{
+							"key": "client",
+							"value": "aa",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "debt",
+							"description": "debt / credit",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2026-09-08",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PATCH",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/debt-credit/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"debt-credit",
+						"1"
+					],
+					"query": [
+						{
+							"key": "is_due_date",
+							"value": "2024-09-09",
+							"disabled": true
+						},
+						{
+							"key": "due_date",
+							"value": "20209-09",
+							"disabled": true
+						},
+						{
+							"key": "client",
+							"value": "aa",
+							"disabled": true
+						},
+						{
+							"key": "desc",
+							"value": "aa",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "debt",
+							"description": "debt / credit",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "{{dev_url}}/api/debt-credit/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "verdiyantorky123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tebar!Dev9",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://auth.angplop.tbrdev.my.id/api/v1/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{staging_url}}/api/v1/debt-credit/1"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "801|K3qAiJcuhM9A2sMqw8a0tLoyTeVjL1f7cjq84uDD"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

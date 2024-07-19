@@ -1,0 +1,8 @@
+### login page
+
+```sh
+== Staff Login ==
+
+Email : Admin@gmail.com
+Password : 1234
+```

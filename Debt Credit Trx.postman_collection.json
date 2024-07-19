@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "5bf112e5-ff10-4f52-9937-5dd81e910377",
+		"name": "Debt Credit Trx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30041811",
+		"_collection_link": "https://cloudy-space-262761.postman.co/workspace/Angplop~b927ad30-d3d8-4502-b8b1-22395c0dd0ce/collection/30041803-5bf112e5-ff10-4f52-9937-5dd81e910377?action=share&source=collection_link&creator=30041811"
+	},
+	"item": [
+		{
+			"name": "listing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/debt-credit-trx/:debt_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"debt-credit-trx",
+						":debt_id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "debt_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "debt_credit_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "is_trx_budget_plan",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "budget_plan_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/v1/debt-credit-trx"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://127.0.0.1:8000/api/debt-credit-trx"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/debt-credit-trx"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "803|TexK70dvnRH5u1X7XnmzySzSFr8zDEC9XeZ3n7HP"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
